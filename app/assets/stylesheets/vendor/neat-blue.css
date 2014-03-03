@@ -11,9 +11,7 @@
 .responsive-slider-parallax .slides-container {
   position: relative;
   overflow: hidden;
-  /* background-image: url(/assets/background-paralax.jpg); */
-  /* background-image: url(/assets/eecs-front.jpg); */
-  background-image: url(/assets/eecs-parallax.png);
+  background-image: url(/assets/background-paralax.jpg);
   background-size: cover;
   background-position: 0 0;
   cursor: move;
