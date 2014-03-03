@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require vendor/jquery.event.move-min
+//= require vendor/jquery.mixitup.min
+//= require vendor/match-height-min
+//= require vendor/reduce-menu-min
+//= require vendor/responsive-calendar-min
+//= require vendor/responsive-slider-min
 //= require_tree .
