@@ -6,6 +6,13 @@ Eecs::Application.routes.draw do
   root 'pages#home'
 
   get 'about' => 'pages#about'
+  get 'about/leadership' => 'pages#leadership'
+  get 'about/staff' => 'pages#staff'
+  get 'about/news' => 'pages#news'
+  get 'about/hours' => 'pages#hours'
+  get 'about/life' => 'pages#life'
+  get 'about/sustainability' => 'pages#sustainability'
+  get 'about/academics' => 'pages#academics'
   get 'contact' => 'pages#contact'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
