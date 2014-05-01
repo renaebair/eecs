@@ -1,0 +1,14 @@
+<% @events.each do |event| %>
+  <a class="news-link" href="http://www.portlandchildrensfilmfestival.com/">
+    <div class="media clearfix background-clouds color-black">
+      <div class="pull-left">
+        <%= image_tag("pcff.png", class: "media-object") %>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><%= event.title %></h3>
+        <p class="media-date"><%= event.date_info %> </p>
+        <p><%= event.description %> </p>
+      </div>
+    </div>
+  </a>
+<% end %>

@@ -1,0 +1,13 @@
+<% @staff_members.each do |staff| %>
+    <div class="media clearfix background-clouds color-black">
+<!--       <div class="pull-left">
+        <%#= image_tag("pcff.png", class: "media-object") %>
+      </div> -->
+      <div class="media-body">
+        <h3 class="media-heading"><%= staff.full_name %></h3>
+        <p class="media-date"><%= staff.title %> </p>
+        <p><%= staff.bio %> </p>
+      </div>
+    </div>
+  </a>
+<% end %>

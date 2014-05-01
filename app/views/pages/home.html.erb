@@ -83,6 +83,17 @@
   });
 </script>
 
+<!-- Events - START -->
+<section class="background-white color-black">
+  <div class="container">
+    <h1 class="text-center x-large">Upcoming Events</h1>
+    <div class="news">
+      <%= render partial: 'events' %>
+    </div>
+  </div>
+</section>
+<!-- Events - FINISH -->
+
 <!-- Info thumbnails - START -->
 <section class="">
   <div class="container">
@@ -186,40 +197,3 @@
   </div>
 </section> -->
 <!-- Info thumbnails - END -->
-
-
-<!-- News - START -->
-<section class="background-white color-black">
-  <div class="container">
-    <h1><span>Upcoming Events</span></h1>
-    <div class="news">
-      <a class="news-link" href="http://www.portlandchildrensfilmfestival.com/">
-        <div class="media clearfix background-clouds color-black">
-          <div class="pull-left">
-            <%= image_tag("pcff.png", class: "media-object") %>
-          </div>
-          <div class="media-body">
-            <h3 class="media-heading">Portland Children's Film Festival</h3>
-            <p class="media-date">April 2-6, 2014 at venues throughout Portland, Maine. </p>
-            <p>The PCFF is an idea born from the minds and hearts of East End Community school parents and teachers who believe in the value of using film to build community. The festival is intended to connect Maine children and their families with people in their own cultures and communities, as well as expand the worldviews of all attendees. Visit the Portland Children's Film Festival website for more information on the shows, dates, and venues. </p>
-          </div>
-        </div>
-      </a>
-      <a class="news-link" href="">
-        <div class="media clearfix background-clouds color-black">
-          <div class="pull-left">
-            <%= image_tag("feast.jpg", class: "media-object") %>
-          </div>
-          <div class="media-body">
-            <h3 class="media-heading">Family Feast</h3>
-            <p class="media-date">March 5th, 5:30 - 7:00 @ East End Community School. </p>
-            <p>Join us for another family feast night at EECS! Bring your family's favorite dish to share, socialize with other families, and enjoy a multitude of activities. </p>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-<!-- News - FINISH -->
-
-
