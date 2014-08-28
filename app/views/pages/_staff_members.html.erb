@@ -6,6 +6,7 @@
       <div class="media-body">
         <h3 class="media-heading"><%= staff.full_name %></h3>
         <p class="media-date"><%= staff.title %> </p>
+        <p><%= image_tag staff.image_url(:thumb) %>
         <p><%= staff.bio %> </p>
       </div>
     </div>
