@@ -33,43 +33,6 @@
           </li>
 
           <li class="<%= 'active' if controller.action_name == 'contact' %>"><%= link_to 'Contact', contact_path %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-search"></span></a>
-            <ul class="dropdown-menu">
-              <li>
-                <form class="form-inline" role="form">
-                  <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="submit">Search</button>
-                    </span>
-                  </div>
-                </form>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-lock"></span></a>
-            <ul class="dropdown-menu">
-              <li>
-                <form role="form">
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"> Remember me
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-default">Login</button>
-                  <%# <span class="color-white"><button type="button" class="btn btn-link pull-right">Register</button></span> %>
-                </form>
-              </li>
-            </ul>
-          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div>
