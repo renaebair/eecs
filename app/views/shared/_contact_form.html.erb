@@ -1,5 +1,5 @@
 <h3>Contact us</h3>
-<% message_params = params.require(:message).permit(:name, :email, :body) %>
+<% message_params = params.fetch(:message, {}).permit(:name, :email, :body) %>
 
 <%= form_for [Message.new(message_params)], :html => {class: 'form-horizontal', role: 'form'}  do |f| %>
   <div class="form-group">
