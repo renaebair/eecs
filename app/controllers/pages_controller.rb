@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def staff
   	@staff_members = StaffMember.all
   end
+
+  def news
+    @articles = Article.all
+  end
 end

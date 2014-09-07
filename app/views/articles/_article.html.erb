@@ -1,0 +1,17 @@
+<div class="block">
+  <a class="info-thumbnail-link" href="<%= article.url %>">
+    <div class="thumbnail info-thumbnail background-clouds color-text">
+      <%= image_tag(article.image) %>
+      <div class="special background-peter-river color-white">
+        <h4><%= article.title %></h4>
+      </div>
+      <div class="caption bordered background-white">
+        <p class="description">
+          <%= article.body %>
+          <br />
+          <%= link_to "Read more...", article.url %>
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
