@@ -20,6 +20,40 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :resize_to_limit => [200, 200]
   end
 
+  version :square do
+    process :create_square_version
+  end
+
+  def create_square_version
+    img = Magick::Image.read(current_path)
+    width = img[0].columns
+    height = img[0].rows
+    if width > height
+      # original is landscape
+      resize_to_fill(400, 400)
+    else
+      # original is portrait
+      resize_to_fit(400, 400) 
+    end
+  end
+
+  version :square_sm do
+    process :create_square_sm_version
+  end
+
+  def create_square_sm_version
+    img = Magick::Image.read(current_path)
+    width = img[0].columns
+    height = img[0].rows
+    if width > height
+      # original is landscape
+      resize_to_fill(200, 200)
+    else
+      # original is portrait
+      resize_to_fit(200, 200) 
+    end
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:

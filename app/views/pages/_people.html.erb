@@ -1,29 +1,23 @@
 <section>
   <div class="container">
     <div class="reduce-top-margin">
-      <h1><span>Leadership</span></h1>
+      <h1><span>Our Staff</span></h1>
       <div class="row">
-        <div class="col-xs-6 col-sm-4 col-md-2">
-          <a href="" class="thumbnail gallery-thumbnail">
-            <%= image_tag 'marcia.png', :class => 'img-circle' %>
-          </a>
-          <br>
-          <p class="text-center"><small>Marcia Gendron... Sed porta ac ipsum ut mollis. Integer id vestibulum dui, at dapibus orci. Nunc adipiscing, orci sit amet ultricies sagittis, arcu orci feugiat.</small></p>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
-          <a href="" class="thumbnail gallery-thumbnail">
-            <%= image_tag 'boyd.gif', :class => 'img-circle' %>
-          </a>
-          <br>
-          <p class="text-center"><small>Boyd Marley...Sed porta ac ipsum ut mollis. Integer id vestibulum dui, at dapibus orci. Nunc adipiscing, orci sit amet ultricies sagittis, arcu orci feugiat.</small></p>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
-          <a href="" class="thumbnail gallery-thumbnail">
-            <%= image_tag 'lynn.png', :class => 'img-circle' %>
-          </a>
-          <br>
-          <p class="text-center"><small>Lynn McCarthy, Librarian...Cras tristique eu sapien ut aliquam. Cras pharetra nisl sapien, ut tincidunt nunc feugiat at. Donec massa nisl, tincidunt eu nulla quis, tristique facilisis nibh.</small></p>
-        </div>
+        <% @staff_members.each do |member| %>
+          <div class="col-xs-6 col-sm-4 col-md-2">
+            <a href="" class="thumbnail gallery-thumbnail">
+              <%= image_tag member.image_url(:square_sm), :class => 'img-circle' %>
+            </a>
+            <br>
+            <p class="text-center">
+              <small>
+                <%= "#{member.full_name}, #{member.title}" %>
+                <br />
+                <%= member.bio %>
+              </small>
+            </p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

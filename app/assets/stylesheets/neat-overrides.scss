@@ -6,8 +6,9 @@
   font-size: 14px;
 }
 
-.thumbnail {
+a.thumbnail.gallery-thumbnail {
   border: none;
+  margin-bottom: 0px;
 }
 
 .nav-footer {
@@ -137,3 +138,19 @@
     padding-right: 5px;
   }
 }
+
+.staff {
+  .media {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ecf0f1;   
+  }
+  .col-md-4, .col-md-8 {
+    margin-bottom: 0px;
+  }
+  img {
+    margin: 0px;
+    width: 100%;
+    border: 3px solid #e74c3c;
+  }
+}
+
