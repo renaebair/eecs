@@ -1,0 +1,143 @@
+<div class="responsive-slider-parallax">
+  <div class="slides-container" data-group="slides">
+    <ul>
+      <li>
+        <div class="slide-body" data-group="slide">
+          <div class="container">
+            <div class="wrapper">
+              <div class="caption header" data-animate="slideAppearRightToLeft" data-delay="0" data-length="300">
+                <h2>EECS</h2>
+                <p class="sub text-left" data-animate="slideAppearLeftToRight" data-delay="300" data-length="300"><span>Building academic excellence</span></p>
+                <p class="sub text-left" data-animate="slideAppearLeftToRight" data-delay="500" data-length="300"><span>through healthy relationships</span></p>
+                <p class="sub text-left" data-animate="slideAppearLeftToRight" data-delay="700" data-length="300"><span>and a child-centered approach.</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Events - START -->
+<% if @events.present? %>
+<section>
+  <div class="container">
+    <h1 class="text-center x-large">Upcoming Events</h1>
+    <% if @events.count == 1%>
+      <div class="col-md-12 events text-center" id="blocks">
+        <%= render @events %>
+      </div>
+    <% else %>
+      <div class="col-md-12 events" id="blocks">
+        <div id="columns">
+          <%= render @events %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+<% end %>
+<!-- Events - FINISH -->
+
+<!-- Info thumbnails - START -->
+<section class="">
+  <div class="container">
+    <h1 class="text-center x-large">Rigor, Relevance & Relationships</h1>
+    <p class="lead text-center">At EECS we are focused on helping our students develop the appropriate academic, interpersonal, and creative problem-solving skills they need to thrive in a growing, changing world. We utilize the Rigor/Relevance framework to ensure children are continually challenged and supported in their learning.</p>
+    <div class="row">
+      <div class="col-sm-4 col-md-4">
+        <div class="info-thumbnail-link">
+        <div class="thumbnail info-thumbnail with-icon background-clouds color-text">
+          <%= image_tag("stem.png") %>
+          <div class="icon">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x color-lead"></i>
+              <i class="fa fa-compass fa-stack-1x color-white"></i>
+            </span>
+          </div>
+          <div class="caption bordered background-white">
+            <h3>STEM</h3>
+            <p class="description">Math and Science literacy and excellence is one of our primary initiatives at EECS. EECS students learn math, science and technology core concepts through problem-based instruction, small-group interaction and visual learning, ensuring each student has a variety of ways to engage, learn, and thrive. </p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <div class="info-thumbnail-link">
+        <div class="thumbnail info-thumbnail with-icon background-clouds color-text">
+          <%= image_tag("rise.png") %>
+          <div class="icon">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x color-lead"></i>
+              <i class="fa fa-star fa-stack-1x color-white"></i>
+            </span>
+          </div>
+          <div class="caption bordered background-white">
+            <h3>Rise & Shine</h3>
+            <p class="description">Our Rise and Shine program helps students kick start their day with a lineup of enriching programs designed to get their minds working and their bodies moving. Students take control of their learning by selecting from programs like Zumba, puppetry, computer programming, glee, video animation, knitting, math club, and hundreds more.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <div class="info-thumbnail-link">
+        <div class="thumbnail info-thumbnail with-icon background-clouds color-text">
+          <%= image_tag("garden1.png") %>
+          <div class="icon">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x color-alizarin"></i>
+              <i class="fa fa-eye fa-stack-1x color-white"></i>
+            </span>
+          </div>
+          <div class="caption bordered background-white">
+            <h3>Literacy</h3>
+            <p class="description">Swag Vice small batch actually pour-over tousled, gluten-free jean shorts drinking vinegar. Tattooed chambray vinyl, umami Wes Anderson fap sartorial fixie selfies YOLO 8-bit. Master cleanse brunch swag, single-origin coffee Thundercats organic pour-over Kickstarter narwhal salvia next level fap try-hard trust fund.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Info thumbnails - END -->
+
+
+<!-- Info thumbnails - START -->
+<!-- <section class="background-white color-black">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-md-4">
+        <a class="info-thumbnail-link" href="/">
+          <div class="thumbnail info-thumbnail">
+            <div class="caption">
+              <h3><span class="fa fa-flag color-lead"></span> Font awesome</h3>
+              <p class="description">NEAT template supports as much modern technologies and trends as possible. One of them is font awesome icons. This great set of fonts is available anywhere you want on your page. Some of NEAT ui elements are also using font awesome like this info thumbnails.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <a class="info-thumbnail-link" href="/">
+        <div class="thumbnail info-thumbnail">
+          <div class="caption">
+            <h3><span class="fa fa-group color-lead"></span> Color classes</h3>
+            <p class="description">You can use template elements as you have them in the examples but if you feel creative you can compose our own color combinations in ui elements. You have beautiful set of flat ui colors to work with just use <i>color-{color-name}</i> or <i>background-{color-name}</i> to change text color or background of any element on the page.</p>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <a class="info-thumbnail-link" href="/">
+          <div class="thumbnail info-thumbnail">
+            <div class="caption">
+              <h3><span class="fa fa-gavel color-lead"></span> Some more info</h3>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis velit nibh, sit amet commodo sapien tristique at. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras bibendum erat at ultricies rhoncus.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- Info thumbnails - END -->

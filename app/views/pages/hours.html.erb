@@ -1,0 +1,43 @@
+
+<!-- Breadcrumbs - START -->
+<div class="background-clouds breadcrumbs-container">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><%= link_to 'Home', root_path %></li>
+      <li class="active">About us</li>
+    </ol>
+  </div>
+</div>
+<!-- Breadcrumbs - END -->
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= render 'about_sidebar' %>
+      </div>
+      <div class="col-md-9">
+        <div class="content">
+          <h1><span>School Hours</span></h1>
+          <p>Monday, Tuesday, Wednesday, Thursday, Friday: 8:05 am - 3:05 pm</p>
+          <p>Early Release Wednesdays: 8:05 am - 2:05 pm</p>
+          <p>Office Hours: 8:00 am - 3:45 pm</p>
+
+          <h2>Arrival Information</h2>
+          <p>School start time is 8:15am. As a School Improvement Grant (SIG) School, we are required to extend learning time. This requirement is met through a 45 minute earlier start time which we utilize for our Rise and Shine programming.</p>
+          <p>Students begin the day with Rise and Shine from 8:15am - 8:50am.</p>
+          <p>Walkers and riders should not arrive before 8:15am.</p>
+          <p>Prior to the 9:00am daily announcements, students will have the opportunity to eat breakfast in their classrooms each morning as part of our Breakfast For Learning program. This program is available to all students at no cost.</p>
+
+          <h2>Dismissal Information</h2>
+          <p>Student dismissal is at 3:05pm. Weather permitting, teachers will escort students to the playground to meet their parents. During inclement weather, the cafeteria will be the designated location for dismissal.</p>
+          <p>From September 25th through May 28th students will be dismissed each Wednesday at 2:05pm.</p>
+          <p>Students will be dismissed only to those named on their Emergency Information Card. In the event there may be another person dismissing your child or there is an  alternative dismissal plan, please notify the office prior to 2:45pm. After 2:45pm we cannot accommdate incoming requests. </p>
+          <p>If a student needs to be dismissed for illness or an emergency, every effort will be made to contact parents directly. Please make sure your child's Emergency Contact Information is up to date so we can safely dismiss your child.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'people' %>

@@ -1,0 +1,40 @@
+<div id="nav-wrapper" class="background-midnight-blue color-white">
+  <nav id="mainMenu" class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar background-lead"></span>
+          <span class="icon-bar background-lead"></span>
+          <span class="icon-bar background-lead"></span>
+        </button>
+        <%= link_to 'East End Community School', root_path, :class => 'navbar-brand' %>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="<%= 'active' if controller.action_name == 'home' %>"><%= link_to 'Home', root_path %></li>
+          <li class="<%= 'active' if request.path =~ /about/ %>"><%= link_to 'About Our School', about_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Parent & Student Resources <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "School Calendar", "http://www2.portlandschools.org/sites/default/files/13-14%20Final.pdf" %></li>
+              <li><%= link_to "Lunch Menus", "http://www2.portlandschools.org/lunch-menus" %></li>
+              <li><%= link_to "Student Handbook", "http://www2.portlandschools.org/sites/default/files/handbooks/Parent%20Handbook.pdf" %></li>
+              <li><%= link_to "PTO", "http://eecs.portlandpto.org/" %></li>
+              <li><%= link_to "Newsletter", "http://www2.portlandschools.org/sites/default/files/School%20Success%20Plan.PDF" %></li>
+              <li><%= link_to "Walking School Bus", "http://portlandwalkingschoolbus.org/" %></li>
+              <li><%= link_to "FASTT Math", "http://teacher.scholastic.com/math-fact-fluency/fastt-math-next-generation/" %></li>
+              <li><%= link_to "First In Math", "http://firstinmath.com/" %></li>
+              <li><%= link_to "Math Team", "http://eastendmath.weebly.com/" %></li>
+            </ul>
+          </li>
+
+          <li class="<%= 'active' if controller.action_name == 'contact' %>"><%= link_to 'Contact', contact_path %></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+</div>

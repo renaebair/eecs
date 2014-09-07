@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  database: eecs_development
+  username: pixelcandy
+  password:
+  port: 5432
+
+test:
+  adapter: postgresql
+  database: eecs_test
+  port: 5432
+
+production:
+  adapter: postgresql
+  database: eecs_production
+  port: 5432

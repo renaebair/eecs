@@ -1,0 +1,29 @@
+
+<!-- Breadcrumbs - START -->
+<div class="background-clouds breadcrumbs-container">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><%= link_to 'Home', root_path %></li>
+      <li class="active">About us</li>
+    </ol>
+  </div>
+</div>
+<!-- Breadcrumbs - END -->
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= render 'about_sidebar' %>
+      </div>
+      <div class="col-md-9">
+        <div class="content">
+          <h1><span>Our Staff</span></h1>
+          <%= render partial: 'staff_members' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%#= render 'people' %>

@@ -1,0 +1,30 @@
+
+<!-- Breadcrumbs - START -->
+<div class="background-clouds breadcrumbs-container">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><%= link_to 'Home', root_path %></li>
+      <li class="active">About us</li>
+    </ol>
+  </div>
+</div>
+<!-- Breadcrumbs - END -->
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= render 'about_sidebar' %>
+      </div>
+      <div class="col-md-8" id="blocks">
+        <h1><span>In the News</span></h1>
+        <div id="columns">
+          <%= render @articles %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'people' %>
+

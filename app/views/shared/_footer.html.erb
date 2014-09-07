@@ -1,0 +1,42 @@
+<footer class="background-midnight-blue color-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h3>Quick links</h3>
+        <ul class="nav-footer">
+          <li class="active"><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Staff Directory', about_staff_path %></li>
+          <li><%= link_to 'About us', about_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>What parents are saying</h3>
+        <% @testamonials.each do |testamonial|%>
+          <p class="testimonial"><%= testamonial.body%></p>
+          <p class="author"><%= testamonial.name%></p>
+        <% end %>
+      </div>
+      <div class="col-md-5">
+        <%= render 'shared/contact_form' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            All rights reserved &copy; 2014 EECS
+          </div>
+          <div class="col-md-6">
+            <p class="social">
+              <a href="https://www.facebook.com/pages/East-End-Community-School/114915611904389"><span class="fa fa-facebook"></span></a>
+              <a href="http://www.youtube.com/results?search_query=%22east%20end%20community%20school%22&sm=3"><span class="fa fa-youtube"></span></a>
+              <a href="http://www.pinterest.com/search/pins/?q=%22east%20end%20community%20school%22"><span class="fa fa-pinterest"></span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

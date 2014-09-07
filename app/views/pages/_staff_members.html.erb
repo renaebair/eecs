@@ -1,0 +1,14 @@
+<% @staff_members.each do |staff| %>
+  <div class="col-md-12 staff">
+    <div class="media clearfix">
+      <div class="col-md-4">
+        <%= image_tag staff.image_url(:square_sm) %>
+      </div>
+      <div class="col-md-8">
+        <h3 class="media-heading"><%= staff.full_name %></h3>
+        <p class="media-date"><%= staff.title %></p>
+        <p><%= staff.bio %> </p>
+      </div>
+    </div>
+  </div>
+<% end %>

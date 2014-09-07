@@ -1,0 +1,48 @@
+
+<!-- Breadcrumbs - START -->
+<div class="background-clouds breadcrumbs-container">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><%= link_to 'Home', root_path %></li>
+      <li class="active">About us</li>
+    </ol>
+  </div>
+</div>
+<!-- Breadcrumbs - END -->
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= render 'about_sidebar' %>
+      </div>
+      <div class="col-md-9">
+        <div class="content">
+          <h1><span>Academics</span></h1>
+          <p>At EECS we are focused on creating students who are engaged in learning and helping them develop strong foundational skills in reading, writing, and mathematics that will allow them to apply their knowledge and skills and to think more deeply with rigor through relevant learning tasks.</p>
+
+          <p>We focus on monitoring student growth and not just student achievement. Our commitment as a school is to ensure students are growing as learners, that they are appropriately challenged, and that they learn how to apply their knowldege pragmatically. We meet each student where they are academically and strive to help them understand the value of knowlege and how to grow as learners.</p>
+
+          <h4>Rigor, Relevance, Relationships</h4>
+          <p>The Rigor/Relevance framework was developed by staff of the <%= link_to "International Center for Leadership in Education", "http://www.leadered.com/" %> to help teachers understand the complex ways students think and give them the tools to develop academic programs based on the ways in which knowledge is acquired, assimilated, and used.</p>
+
+          <p>Teachers at EECS use this framework to develop their instructional strategies, using  tools to meet students where they are individually and help them grow into creative thinkers and problem solvers by: </p>
+          <ol>
+            <li>Ensuring the concepts are presented as relevant to the students. </li>
+            <li>Adding rigor to challenge students when necessary.</li>
+            <li>Focusing on building relationships between staff, students, and the outside world.</li>
+          </ol>
+
+          <p>Review our <%= link_to "2012-2013 Success Plan", "http://www2.portlandschools.org/sites/default/files/School%20Success%20Plan.PDF" %> for more information on our strategy for academic excellence, and to learn about the great strides we have made over the last two years.</p>
+        </div>
+        <h2><span>Mathematics</span></h2>
+        <p>enVisionMATH  is designed for students in grades K–6. It helps students develop an understanding of math concepts through problem-based instruction, small-group interaction, and visual learning with a focus on reasoning and modeling.</p>
+
+        <h2><span>Literacy and Reading Comprehension</span></h2>
+        <p>Blurb here about reading programs, maybe something from the literacy girls? Forgot their names but they're awesome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'people' %>
