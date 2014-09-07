@@ -19,45 +19,24 @@
   </div>
 </div>
 
-<!-- Responsive slider - END -->
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.responsive-calendar').responsiveCalendar({
-      time: '2013-05',
-      events: {
-        "2013-05-30": {"number": 5, "badgeClass": "background-turquoise", "url": "http://w3widgets.com/responsive-slider"},
-        "2013-05-26": {"number": 1, "badgeClass": "background-turquoise", "url": "http://w3widgets.com"}, 
-        "2013-05-03": {"number": 1, "badgeClass": "background-pomegranate"}, 
-        "2013-05-12": {}}
-    });
-
-    $('#mixit').mixitup();
-  });
-
-  $(window).load(function(){
-    if ($(window).width() > 767) {
-      matchHeight($('.info-thumbnail .caption .description'), 3);
-    }
-
-    $(window).on('resize', function(){
-      if ($(window).width() > 767) {
-        $('.info-thumbnail .caption .description').height('auto');
-        matchHeight($('.info-thumbnail .caption .description'), 3);
-      }
-    });
-  });
-</script>
-
 <!-- Events - START -->
 <% if @events.present? %>
-  <section class="background-white color-black">
-    <div class="container">
-      <h1 class="text-center x-large">Upcoming Events</h1>
-      <div class="news">
-        <%= render partial: 'events' %>
+<section>
+  <div class="container">
+    <h1 class="text-center x-large">Upcoming Events</h1>
+    <% if @events.count == 1%>
+      <div class="col-md-12 events text-center" id="blocks">
+        <%= render @events %>
       </div>
-    </div>
-  </section>
+    <% else %>
+      <div class="col-md-12 events" id="blocks">
+        <div id="columns">
+          <%= render @events %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
 <% end %>
 <!-- Events - FINISH -->
 
@@ -122,6 +101,7 @@
   </div>
 </section>
 <!-- Info thumbnails - END -->
+
 
 <!-- Info thumbnails - START -->
 <!-- <section class="background-white color-black">
