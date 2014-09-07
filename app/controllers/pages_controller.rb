@@ -10,6 +10,6 @@ class PagesController < ApplicationController
   end
 
   def find_staff
-  	@staff_members = StaffMember.limit(6)
+  	@staff_members = StaffMember.all.shuffle[0..5]
   end
 end
