@@ -16,11 +16,14 @@
       <div class="col-md-3">
         <%= render 'about_sidebar' %>
       </div>
-      <div class="col-sm-8">
-        <%= render @articles %>
+      <div class="col-md-8" id="blocks">
+        <div id="columns">
+          <%= render @articles %>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <%= render 'people' %>
+
