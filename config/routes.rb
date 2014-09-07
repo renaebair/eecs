@@ -16,6 +16,8 @@ Eecs::Application.routes.draw do
   get 'about/sustainability' => 'pages#sustainability'
   get 'about/academics' => 'pages#academics'
   get 'contact' => 'pages#contact'
+
+  resources :messages, :only => :create
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

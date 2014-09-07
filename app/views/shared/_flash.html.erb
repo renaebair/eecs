@@ -1,0 +1,14 @@
+<% if flash %>
+  <% flash.keys.each do |key| %>
+    <% [flash[key]].compact.flatten.each do |msg| %>
+      <div class='flash'>
+        <div class='alert-flash alert <%= "alert-#{key.to_s}" %>'>
+          <div class="container">
+            <p><%= msg.html_safe %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+

@@ -20,6 +20,7 @@
   <![endif]-->
 </head>
 <body>
+  <%= render partial: 'shared/flash', locals: { flash: flash } %>
   <%= render 'shared/header' %>
   <%= yield %>
   <%= render 'shared/footer' %>
