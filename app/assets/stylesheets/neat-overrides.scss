@@ -15,6 +15,23 @@ a.thumbnail.gallery-thumbnail {
   margin-bottom: 20px;
 }
 
+.responsive-slider-parallax {
+  border-bottom: 6px solid black;
+}
+
+.responsive-slider-parallax .slides-container {
+  background-image: url(asset-path("eecs-parallax.png"));
+}
+
+.media-date{
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.news a.news-link {
+  color: b;
+}
+
 .responsive-slider-parallax .slides-container {
   background-image: url(asset-path("eecs-parallax.png"));
 }
@@ -154,3 +171,10 @@ a.thumbnail.gallery-thumbnail {
   }
 }
 
+
+.info-thumbnail-link {
+  .thumbnail {
+    min-height: 475px;
+  }
+}
+  
