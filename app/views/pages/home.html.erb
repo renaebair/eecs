@@ -84,14 +84,16 @@
 </script>
 
 <!-- Events - START -->
-<section class="background-white color-black">
-  <div class="container">
-    <h1 class="text-center x-large">Upcoming Events</h1>
-    <div class="news">
-      <%= render partial: 'events' %>
+<% if @events.present? %>
+  <section class="background-white color-black">
+    <div class="container">
+      <h1 class="text-center x-large">Upcoming Events</h1>
+      <div class="news">
+        <%= render partial: 'events' %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>
 <!-- Events - FINISH -->
 
 <!-- Info thumbnails - START -->
