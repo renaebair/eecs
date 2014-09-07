@@ -4,9 +4,9 @@ class MessagesController < ApplicationController
     if @message.save
       flash[:success] = "Message sent!"
     else
-      flash[:error] = "Unable to send message :("
+      flash[:error] = "Unable to send message: #{@message.errors.full_messages.to_sentence}"
     end
-    redirect_to root_path
+    redirect_to root_path(:message => message_params)
   end
 
   private

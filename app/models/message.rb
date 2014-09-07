@@ -1,3 +1,3 @@
 class Message < ActiveRecord::Base
-  # attr_accessible :name, :email, :body
+  validates_presence_of :name, :email, :body
 end

@@ -1,5 +1,7 @@
 <h3>Contact us</h3>
-<%= form_for [Message.new], :html => {class: 'form-horizontal', role: 'form'}  do |f| %>
+<% message_params = params.require(:message).permit(:name, :email, :body) %>
+
+<%= form_for [Message.new(message_params)], :html => {class: 'form-horizontal', role: 'form'}  do |f| %>
   <div class="form-group">
     <%= f.label :name, :class => "col-lg-3 control-label" %>
     <div class="col-lg-9">
