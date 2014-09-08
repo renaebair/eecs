@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :find_testimonials
+  before_filter :find_quotes
 
-  def find_testimonials
-    @testimonials = Testimonial.all.shuffle[0..1]
+  def find_quotes
+    @quotes = Quote.all.shuffle[0..1] rescue []
   end
 end

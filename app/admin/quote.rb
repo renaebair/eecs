@@ -1,4 +1,4 @@
-ActiveAdmin.register Testimonial do
+ActiveAdmin.register Quote do
 
   permit_params :name, :body
 

@@ -12,9 +12,9 @@
       </div>
       <div class="col-md-4">
         <h3>What parents are saying</h3>
-        <% @testimonials.each do |testimonial|%>
-          <p class="testimonial"><%= testimonial.body%></p>
-          <p class="author"><%= testimonial.name%></p>
+        <% @quotes.each do |quote|%>
+          <p class="quote"><%= quote.body%></p>
+          <p class="author"><%= quote.name%></p>
         <% end %>
       </div>
       <div class="col-md-5">
