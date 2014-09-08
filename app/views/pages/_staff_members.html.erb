@@ -2,7 +2,11 @@
   <div class="col-md-12 staff">
     <div class="media clearfix">
       <div class="col-md-4">
-        <%= image_tag staff.image_url(:square_sm) %>
+        <% if staff.image_url %>
+          <%=image_tag staff.image_url(:square_sm) %>
+        <% else %>
+          <%= image_tag("staff_blank.jpg") %>
+        <% end %>
       </div>
       <div class="col-md-8">
         <h3 class="media-heading"><%= staff.full_name %></h3>
