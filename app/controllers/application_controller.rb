@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   before_filter :find_parent_quotes
 
   def find_parent_quotes
-    @parent_quotes = ParentQuote.all.shuffle[0..1] rescue []
+    @quotes = ParentQuote.all.shuffle[0..1] rescue []
   end
 end

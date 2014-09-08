@@ -10,13 +10,13 @@
           <li><%= link_to 'Contact', contact_path %></li>
         </ul>
       </div>
-<!--       <div class="col-md-4">
+      <div class="col-md-4">
         <h3>What parents are saying</h3>
-        <%# @quotes.each do |quote|%>
+        <% @quotes.each do |quote|%>
           <p class="quote"><%= quote.body%></p>
           <p class="author"><%= quote.name%></p>
-        <%# end %>
-      </div> -->
+        <% end %>
+      </div>
       <div class="col-md-5">
         <%= render 'shared/contact_form' %>
       </div>
