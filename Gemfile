@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'rmagick', :require => 'RMagick'
 gem 'carrierwave'
+gem 'devise'
 
 group :doc do
   gem 'sdoc', require: false
