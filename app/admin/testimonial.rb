@@ -1,4 +1,5 @@
-ActiveAdmin.register Testamonial do
+ActiveAdmin.register Testimonial do
+
   permit_params :name, :body
 
   index do
