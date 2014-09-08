@@ -14,7 +14,7 @@
         <h3>What parents are saying</h3>
         <% @quotes.each do |quote|%>
           <p class="quote"><%= quote.body%></p>
-          <p class="author"><%= quote.name%></p>
+          <p class="author"><%= quote.parent_name%></p>
         <% end %>
       </div>
       <div class="col-md-5">
