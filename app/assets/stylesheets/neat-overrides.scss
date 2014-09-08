@@ -179,6 +179,9 @@ a.thumbnail.gallery-thumbnail {
 }
   
 .events {
+  .thumbnail {
+    max-width: 500px;
+  }
   .meta {
     h3 {
       margin-top: 10px;
