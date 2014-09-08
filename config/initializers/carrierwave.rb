@@ -7,4 +7,5 @@ CarrierWave.configure do |config|
   }
  
   config.fog_directory    = "eecs.#{Rails.env}"
+  config.fog_public       = true
 end
