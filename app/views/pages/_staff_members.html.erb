@@ -3,7 +3,7 @@
     <div class="media clearfix">
       <div class="col-md-4">
         <% if staff.image_url %>
-          <%=image_tag staff.image_url(:square_sm) %>
+          <%= image_tag staff.image_url(:square_sm) %>
         <% else %>
           <%= image_tag("staff_blank.jpg") %>
         <% end %>
