@@ -13,6 +13,7 @@ Eecs::Application.routes.draw do
   get 'about/news' => 'pages#news'
   get 'about/hours' => 'pages#hours'
   get 'about/life' => 'pages#life'
+  get 'about/announcements' => 'pages#announcements'
   get 'about/sustainability' => 'pages#sustainability'
   get 'about/academics' => 'pages#academics'
   get 'contact' => 'pages#contact'
