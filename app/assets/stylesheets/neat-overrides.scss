@@ -200,7 +200,32 @@ a.thumbnail.gallery-thumbnail {
   }
 }
 
+@media (min-width: 995px) {
+  .brand-lg {
+    display: block;
+  }
+
+  .brand-sm {
+    display: none;
+  }
+}
+@media (max-width: 994px) {
+  .brand-lg {
+    display: none;
+  }
+
+  .brand-sm {
+    display: block;
+  }
+}
+
 @media (max-width: 767px) {
+
+  .home {
+    h1.x-large {
+      font-size: 3em;
+    }
+  }
   .events {
     text-align: center;
     width: 100%;
