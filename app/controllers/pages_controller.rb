@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def find_staff
-    @staff_members = StaffMember.all
+    @staff_members = StaffMember.all.order('last_name ASC')
   end
 
   def find_staff_circles
