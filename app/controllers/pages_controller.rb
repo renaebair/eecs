@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   end
 
   def find_staff
-  	@staff_members = StaffMember.all.shuffle
+  	@staff_members = StaffMember.all.shuffle[0..5]
   end
 
   def announcements
