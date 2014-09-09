@@ -1,12 +1,13 @@
-<div class="block text-left">
-  <div class="thumbnail">
-    <%= image_tag(event.image) %>
-    <div class="meta">
-      <h3><%= event.title %></h3>
-      <h4><%= event.date_info %></h4>
-      <p class="description">
-        <%= event.description %>
-      </p>
-    </div>
+<div class="row event">
+  <div class="col-md-2 col-sm-2">
+    <%= image_tag(event.image_url(:thumb)) %>
+  </div>
+  <div class="meta col-md-10 col-sm-10">
+    <h3><%= event.title %></h3>
+    <h4><%= event.date_info %></h4>
+    <p class="description">
+      <%= event.description %>
+    </p>
+    <%= link_to "Read more...", event.url if event.url.present? %>
   </div>
 </div>

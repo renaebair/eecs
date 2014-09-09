@@ -24,17 +24,9 @@
 <section>
   <div class="container">
     <h1 class="text-center x-large">Announcements</h1>
-    <% if @events.count == 1%>
-      <div class="col-md-12 events text-center" id="blocks">
+      <div class="col-md-10 col-md-offset-1 events">
         <%= render @events %>
       </div>
-    <% else %>
-      <div class="col-md-12 events" id="blocks">
-        <div id="columns">
-          <%= render @events %>
-        </div>
-      </div>
-    <% end %>
   </div>
 </section>
 <% end %>
