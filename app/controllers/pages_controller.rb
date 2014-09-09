@@ -19,6 +19,6 @@ class PagesController < ApplicationController
   end
 
   def announcements
-    @announcements = Event.all
+    @events = Event.all
   end
 end
