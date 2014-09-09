@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-  	@events = Events.all
+  	@events = Event.published
 
   	respond_to do |format|
       format.html

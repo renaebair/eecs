@@ -1,5 +1,5 @@
 ActiveAdmin.register Event do
-  permit_params :title, :description, :date_info, :on, :event, :image, :url
+  permit_params :title, :description, :date_info, :on, :event, :published, :image, :url
 
   index do
     column :title
@@ -8,6 +8,7 @@ ActiveAdmin.register Event do
     column :url
     column :image, :as => :file
     column :created_at
+    column :published
     actions
   end
 end

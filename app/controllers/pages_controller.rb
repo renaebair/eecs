@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   before_filter :find_staff
 
   def home
-  	@events = Event.limit(5)
+  	@events = Event.published.limit(5)
   end
 
   def news
@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   end
 
   def find_staff
-  	@staff_members = StaffMember.all.shuffle[0..5]
+  	@staff_members = StaffMember.all.shuffle
   end
 
   def announcements
