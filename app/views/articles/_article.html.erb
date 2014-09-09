@@ -1,18 +1,12 @@
-<div class="block">
-  <a class="info-thumbnail-link" href="<%= article.url %>">
-    <div class="thumbnail info-thumbnail background-clouds color-text">
-      <%= image_tag(article.image) %>
-      <div class="special background-peter-river color-white">
-        <h4><%= article.title %></h4>
-      </div>
-      <div class="caption bordered background-white">
-        <p class="description">
-          <%= article.body %>
-          <br />
-          <%= link_to "Read more...", article.url %>
-        </p>
-      </div>
-    </div>
-  </a>
+<div class="row article">
+  <div class="col-md-2 col-sm-2">
+    <%= image_tag(article.image_url(:thumb)) %>
+  </div>
+  <div class="meta col-md-10 col-sm-10">
+    <h3><%= article.title %></h3>
+    <p class="description">
+      <%= article.body %>
+    </p>
+    <%= link_to "Read more...", article.url if article.url.present? %>
+  </div>
 </div>
-
