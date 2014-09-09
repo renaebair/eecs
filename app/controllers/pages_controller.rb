@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_filter :find_staff_circles
   before_filter :find_staff
 
   def home
@@ -10,7 +11,11 @@ class PagesController < ApplicationController
   end
 
   def find_staff
-  	@staff_members = StaffMember.all.shuffle[0..5]
+    @staff_members = StaffMember.all
+  end
+
+  def find_staff_circles
+  	@staff_member_circles = StaffMember.all.shuffle[0..5]
   end
 
   def announcements
