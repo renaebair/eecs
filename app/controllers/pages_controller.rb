@@ -19,6 +19,6 @@ class PagesController < ApplicationController
   end
 
   def announcements
-    @events = Event.all
+    @events = Event.all.order('created_at DESC')
   end
 end
