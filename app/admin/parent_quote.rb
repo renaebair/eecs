@@ -1,4 +1,5 @@
 ActiveAdmin.register ParentQuote do
+	menu :parent => "Super Admin Only", :if => proc { current_admin_user.super_admin? }
   permit_params :parent_name, :body
 
   index do

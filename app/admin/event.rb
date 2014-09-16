@@ -1,4 +1,5 @@
 ActiveAdmin.register Event do
+  menu :parent => "Super Admin Only", :if => proc { current_admin_user.super_admin? }
   permit_params :title, :description, :date_info, :on, :event, :published, :image, :url
 
   index do

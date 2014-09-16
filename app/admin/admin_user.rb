@@ -1,4 +1,5 @@
 ActiveAdmin.register AdminUser do
+  menu :parent => "Super Admin Only", :if => proc { current_admin_user.super_admin? }
   permit_params :email, :password, :password_confirmation
 
   index do

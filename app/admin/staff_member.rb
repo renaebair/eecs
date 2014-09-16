@@ -1,4 +1,5 @@
 ActiveAdmin.register StaffMember do
+  menu :parent => "Super Admin Only", :if => proc { current_admin_user.super_admin? }
 
   permit_params :bio, :first_name, :last_name, :title, :email, :phone, :on, :staff_member, :image
 

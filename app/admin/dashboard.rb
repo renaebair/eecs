@@ -1,4 +1,5 @@
 ActiveAdmin.register_page "Dashboard" do
+  menu :parent => "Super Admin Only", :if => proc { current_admin_user.super_admin? }
 
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
