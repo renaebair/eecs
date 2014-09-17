@@ -1,6 +1,6 @@
 ActiveAdmin.register Post do
   scope_to :current_admin_user
-  permit_params :title, :body
+  permit_params :title, :body, :image
 
   index do
     column :title
@@ -8,10 +8,11 @@ ActiveAdmin.register Post do
     actions
   end
 
-  form do |f|
+  form(:html => { :multipart => true }) do |f|
     f.inputs "Post" do
       f.input :title
       f.input :body
+      f.input :image, :as => :file
       f.input :admin_user, :as => :hidden
     end
     f.actions

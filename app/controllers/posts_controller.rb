@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :find_user
+  before_filter :find_staff_member
 
 	def index
 		@posts = @user ? @user.posts.all : Post.all
@@ -9,10 +9,9 @@ class PostsController < ApplicationController
 		@posts = Post.find(params[:id])
 	end
 
-  def find_user
-    @user = AdminUser.find(params[:admin_user_id])
+  def find_staff_member
+    @user = AdminUser.find(params[:staff_member_id])
   rescue
     @user = nil
   end
-
 end

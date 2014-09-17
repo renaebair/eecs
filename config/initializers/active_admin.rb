@@ -43,11 +43,11 @@ ActiveAdmin.setup do |config|
     config.site_title = "My Default Site Title"
     
     config.namespace :admin do |admin|
-      admin.site_title = "Admin Site"
+      admin.site_title = "EECS Custom Management System"
     end
 
     config.namespace :super_admin do |super_admin|
-      super_admin.site_title = "Super Admin Site"
+      super_admin.site_title = "Super Admin Access"
     end
   #
   # This will ONLY change the title for the admin section. Other
@@ -117,7 +117,7 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.allow_comments = false
+  config.allow_comments = false
   #
   # You can disable the menu item for the comments index page:
   # config.show_comments_in_menu = false
