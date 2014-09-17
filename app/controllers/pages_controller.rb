@@ -11,11 +11,11 @@ class PagesController < ApplicationController
   end
 
   def find_staff
-    @staff_members = StaffMember.all.order('last_name ASC')
+    @staff_members = AdminUser.staff.order('last_name ASC')
   end
 
   def find_staff_circles
-  	@staff_member_circles = StaffMember.all.shuffle[0..5]
+  	@staff_member_circles = AdminUser.all.shuffle[0..5]
   end
 
   def announcements

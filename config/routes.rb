@@ -21,6 +21,11 @@ Eecs::Application.routes.draw do
 
   resources :messages, :only => :create
   resources :posts
+
+  resources :admin_users do
+    resources :posts
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
