@@ -2,6 +2,8 @@ ActiveAdmin.register AdminUser do
   menu :parent => "Super Admin Only", :if => proc { current_admin_user.super_admin? }
   permit_params :email, :password, :password_confirmation, :bio, :first_name, :last_name, :title, :staff_member, :phone, :on, :admin_user, :image
 
+  before_filter :skip_sidebar!
+
   index do
     selectable_column
     id_column

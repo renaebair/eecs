@@ -1,7 +1,8 @@
 ActiveAdmin.register Post do
   scope_to :current_admin_user
   permit_params :title, :body, :image
-
+  before_filter :skip_sidebar!
+  
   index do
     column :title
     column :body

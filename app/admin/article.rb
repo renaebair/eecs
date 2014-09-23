@@ -2,6 +2,7 @@ ActiveAdmin.register Article do
 	menu :parent => "Super Admin Only", :if => proc { current_admin_user.super_admin? }
 
   permit_params :title, :body, :image, :url
+  before_filter :skip_sidebar!
 
   index do
     column :title

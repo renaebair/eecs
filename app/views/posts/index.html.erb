@@ -28,7 +28,10 @@
               <p><%= post.author %></p>
               <p><%= post.created_at %></p>
               <p><%= post.body %></p>
-              <%= image_tag post.image_url(:square) %>
+              <% if post.image? %>
+                <%= image_tag post.image_url(:square) %>
+              <% else %>
+              <% end %>
             </div>
           <% end %>
         </div>
