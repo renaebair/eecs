@@ -1,5 +1,5 @@
 class AdminUser < ActiveRecord::Base
-	mount_uploader :image, ImageUploader
+	mount_uploader :attachment, AttachmentUploader
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, 
@@ -7,6 +7,12 @@ class AdminUser < ActiveRecord::Base
 
   has_many :posts
   scope :staff, where(:staff_member => true)
+
+  make_permalink :full_name    
+
+  def to_param
+    permalink
+  end
 
   def uuid
   	"USER#{id}"

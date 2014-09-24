@@ -4,10 +4,10 @@
       <h1><span>Our Staff</span></h1>
       <div class="row">
         <% @staff_member_circles.each do |member| %>
-          <% unless member.image.nil? %>
+          <% unless member.attachment.nil? %>
             <div class="col-xs-6 col-sm-4 col-md-2">
               <a href="" class="thumbnail gallery-thumbnail">
-                <%= image_tag member.image_url(:square_sm), :class => 'img-circle' %>
+                <%= image_tag member.attachment_url(:square_sm), :class => 'img-circle' %>
               </a>
               <br>
               <p class="text-center">

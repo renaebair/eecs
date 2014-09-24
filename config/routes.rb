@@ -22,8 +22,11 @@ Eecs::Application.routes.draw do
   resources :messages, :only => :create
   resources :posts
 
+  
+
   resources :staff_members, controller: 'admin_users' do
     resources :posts
+    get "/:id", :to => "admin_users#show", :as => :friendly_user
   end
   # resources :admin_users, :as => :staff_members do
   #   resources :posts

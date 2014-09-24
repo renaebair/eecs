@@ -1,6 +1,6 @@
 ActiveAdmin.register Post do
   scope_to :current_admin_user
-  permit_params :title, :body, :image
+  permit_params :title, :body, :attachment
   before_filter :skip_sidebar!
   
   index do
@@ -13,7 +13,7 @@ ActiveAdmin.register Post do
     f.inputs "Post" do
       f.input :title
       f.input :body
-      f.input :image, :as => :file
+      f.input :attachment, :as => :file
       f.input :admin_user, :as => :hidden
     end
     f.actions

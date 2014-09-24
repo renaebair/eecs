@@ -2,7 +2,7 @@
   <div class="col-md-12 staff">
     <div class="media clearfix">
       <div class="col-md-4">
-        <%= image_tag staff.image_url(:square_sm) %>
+        <%= image_tag staff.attachment_url(:square_sm) %>
       </div>
       <div class="col-md-8">
         <h3 class="media-heading"><%= link_to staff.full_name,  staff_member_posts_path(staff) %></h3>

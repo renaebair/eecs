@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	mount_uploader :image, ImageUploader
+	mount_uploader :attachment, AttachmentUploader
 	belongs_to :admin_user
 
   def author

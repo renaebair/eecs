@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class ImageUploader < CarrierWave::Uploader::Base
+class AttachmentUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::MiniMagick
@@ -20,12 +20,28 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  version :thumb do
+  version :thumb, :if => :image_upload? do
     process :resize_to_limit => [200, 200]
   end
 
-  version :square do
+  version :square, :if => :image_upload? do
     process :create_square_version
+  end
+
+  version :square_sm, :if => :image_upload? do
+    process :create_square_sm_version
+  end
+
+  def image?
+    !!(content_type =~ /image/)
+  end
+
+  def file?
+    !!(content_type =~ /pdf/)
+  end
+
+  def image_upload?(new_file)
+    new_file.content_type.include? 'image'
   end
 
   def create_square_version
@@ -39,10 +55,6 @@ class ImageUploader < CarrierWave::Uploader::Base
       # original is portrait
       resize_to_fit(400, 400) 
     end
-  end
-
-  version :square_sm do
-    process :create_square_sm_version
   end
 
   def create_square_sm_version
@@ -81,7 +93,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list
-    %w(jpg jpeg gif png)
+    %w(jpg jpeg gif png pdf)
   end
 
   # Override the filename of the uploaded files:

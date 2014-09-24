@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917144418) do
+ActiveRecord::Schema.define(version: 20140924005541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20140917144418) do
     t.string   "title"
     t.text     "bio"
     t.string   "avatar"
-    t.string   "image"
+    t.string   "attachment"
     t.string   "phone"
     t.boolean  "staff_member",           default: true
   end
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20140917144418) do
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "body"
-    t.string   "image"
+    t.string   "attachment"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20140917144418) do
     t.string   "title"
     t.text     "description"
     t.string   "date_info"
-    t.string   "image"
+    t.string   "attachment"
     t.string   "url"
     t.boolean  "published",   default: true
     t.datetime "created_at"
@@ -92,12 +92,12 @@ ActiveRecord::Schema.define(version: 20140917144418) do
   end
 
   create_table "posts", force: true do |t|
-    t.text     "title"
+    t.string   "title"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "admin_user_id"
-    t.string   "image"
+    t.string   "attachment"
   end
 
   create_table "quotes", force: true do |t|
