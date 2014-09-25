@@ -200,6 +200,40 @@ a.thumbnail.gallery-thumbnail {
   }
 }
 
+.posts{
+  .avatar {
+    img {
+      width: 50px;
+      border-radius: 4px;
+      margin: 0px;
+      margin-right: 10px;
+    }
+  }
+  .post {
+    h1 {
+      border-bottom: none;
+    }
+    .meta {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      p {
+        padding-top: 5px;
+      }
+    }
+    .attachments {
+      img {
+        display: inline
+      }
+      .file {
+        display: inline;
+        width: 200px;
+        height: 200px;
+        overflow-wrap: break-word;
+      }
+    }
+  }
+}
+
 @media (min-width: 995px) {
   .brand-lg {
     display: block;

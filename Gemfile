@@ -15,6 +15,7 @@ gem 'rmagick', :require => 'RMagick'
 gem 'carrierwave'
 gem 'fog'
 gem 'devise'
+gem 'redcarpet'
 
 group :doc do
   gem 'sdoc', require: false
