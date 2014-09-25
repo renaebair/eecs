@@ -1,31 +1,43 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-
-  # Include RMagick or MiniMagick support:
-  # include CarrierWave::MiniMagick
   include CarrierWave::RMagick
-
-  # Choose what kind of storage to use for this uploader:
-  # storage :file
   storage :fog
 
   def fog_public
     true
   end
 
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
+  def image_upload?(new_file)
+    new_file.content_type.include? 'image'
+  end
+
+  def image?
+    !!(content_type =~ /image/)
+  end
+
+  def file?
+    !!(content_type !~ /image/)
+  end
+
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  version :thumb do
+  def default_url
+    "fallback/" + [version_name, "default.jpg"].compact.join('_')
+  end
+
+  version :thumb, :if => :image_upload? do
     process :resize_to_limit => [200, 200]
   end
 
-  version :square do
+  version :square, :if => :image_upload? do
     process :create_square_version
+  end
+
+  version :square_sm, :if => :image_upload? do
+    process :create_square_sm_version
   end
 
   def create_square_version
@@ -41,10 +53,6 @@ class ImageUploader < CarrierWave::Uploader::Base
     end
   end
 
-  version :square_sm do
-    process :create_square_sm_version
-  end
-
   def create_square_sm_version
     img = Magick::Image.read(current_path)
     width = img[0].columns
@@ -57,37 +65,4 @@ class ImageUploader < CarrierWave::Uploader::Base
       resize_to_fit(200, 200) 
     end
   end
-
-  # Provide a default URL as a default if there hasn't been a file uploaded:
-  def default_url
-    # For Rails 3.1+ asset pipeline compatibility:
-    # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
-  
-    "fallback/" + [version_name, "default.jpg"].compact.join('_')
-  end
-
-  # Process files as they are uploaded:
-  # process :scale => [200, 300]
-  #
-  # def scale(width, height)
-  #   # do something
-  # end
-
-  # Create different versions of your uploaded files:
-  # version :thumb do
-  #   process :resize_to_fit => [50, 50]
-  # end
-
-  # Add a white list of extensions which are allowed to be uploaded.
-  # For images you might use something like this:
-  def extension_white_list
-    %w(jpg jpeg gif png)
-  end
-
-  # Override the filename of the uploaded files:
-  # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
-
 end
