@@ -18,72 +18,102 @@
       </div>
       <div class="col-md-9">
         <div class="content">
-          <h1><span>Volunteers</span></h1>
-          <p>At EECS we are focused on creating students who are engaged in learning and helping them develop strong foundational skills in reading, writing, and mathematics that will allow them to apply their knowledge and skills and to think more deeply with rigor through relevant learning tasks.</p>
+          <h1><span>Parent Volunteer Information</span></h1>
+          <p>Thank you for your interest in volunteering; your help is needed in so many ways! If you want to see the ways volunteers helped EECS last year, take a look at <%= link_to 'this newsletter', pages_download_pdf_url %> thanking all of the inspirational people who helped make last year succesful!</p> 
 
-          <p>We focus on monitoring student growth and not just student achievement. Our commitment as a school is to ensure students are growing as learners, that they are appropriately challenged, and that they learn how to apply their knowldege pragmatically. We meet each student where they are academically and strive to help them understand the value of knowlege and how to grow as learners.</p>
+          <p>Here are the people to contact to find out more about how you can get involved:</p>
+          
+          <div class="row article">
+            <div class="col-md-4 col-sm-4">
+              <%= image_tag("eecs_6.jpg") %>
+            </div>
+            <div class="meta col-md-6 col-sm-6">
+              <h3>Classroom</h3>
+              <p class="description">
+                There are many various volunteer opportunities in the classrooms, from reading to children, helping on field trips, helping provide supplies for special activities, and many others.
+              </p>
+              <p>Contact: <%= mail_to "colek@portlandschools.org", "Kathy Cole" %> or contact your child’s teacher directly.</p> 
+            </div>
+          </div>
 
-          <h4>Rigor, Relevance, Relationships</h4>
-          <p>The Rigor/Relevance framework was developed by staff of the <%= link_to "International Center for Leadership in Education", "http://www.leadered.com/" %> to help teachers understand the complex ways students think and give them the tools to develop academic programs based on the ways in which knowledge is acquired, assimilated, and used.</p>
+          <div class="row article">
+            <div class="col-md-4 col-sm-4">
+              <%= image_tag("library.png") %>
+            </div>
+            <div class="meta col-md-6 col-sm-6">
+              <h3>Library</h3>
+              <p class="description">
+                Book shelving, check-in & out, and special projects.
+              </p>
+              <p>Contact: <%= mail_to "mccarthyl@portlandschools.org", "Lynn McCarthy"%></p> 
+            </div>
+          </div>
 
-          <p>Teachers at EECS use this framework to develop their instructional strategies, using  tools to meet students where they are individually and help them grow into creative thinkers and problem solvers by: </p>
-          <ol>
-            <li>Ensuring the concepts are presented as relevant to the students. </li>
-            <li>Adding rigor to challenge students when necessary.</li>
-            <li>Focusing on building relationships between staff, students, and the outside world.</li>
-          </ol>
+          <div class="row article">
+            <div class="col-md-4 col-sm-4">
+              <%= image_tag("pto.png") %>
+            </div>
+            <div class="meta col-md-6 col-sm-6">
+              <h3>Parent Teacher Organization</h3>
+              <p class="description">Special events, snack pantry, teacher appreciation, and more!
+              </p>
+              <p>Contact: <%= mail_to "dyan@maine.rr.com", "Dyan Albano"%></p> 
+            </div>
+          </div>
 
-          <p>Review our <%= link_to "2012-2013 Success Plan", "http://www2.portlandschools.org/sites/default/files/School%20Success%20Plan.PDF" %> for more information on our strategy for academic excellence, and to learn about the great strides we have made over the last two years.</p>
+          <div class="row article">
+            <div class="col-md-4 col-sm-4">
+              <%= image_tag("film_festival.png") %>
+            </div>
+            <div class="meta col-md-6 col-sm-6">
+              <h3>Children's Film Festival</h3>
+              <p class="description">
+                A city wide community arts project.
+              </p>
+              <p>Contact: <%= mail_to "boxermacomber@earthlink.net", "Lauri Boxer-Macomber"%></p> 
+            </div>
+          </div>
+
+          <div class="row article">
+            <div class="col-md-4 col-sm-4">
+              <%= image_tag("rise_shine.png") %>
+            </div>
+            <div class="meta col-md-6 col-sm-6">
+              <h3>Rise & Shine</h3>
+              <p class="description">
+                Share your talents to help students start their school day. New ideas always welcome!
+              </p>
+              <p>Contact: <%= mail_to "nogard@portlandschools.org", "Dan Nogar"%></p> 
+            </div>
+          </div>
+
+          <div class="row article">
+            <div class="col-md-4 col-sm-4">
+              <%= image_tag("garden1.png") %>
+            </div>
+            <div class="meta col-md-6 col-sm-6">
+              <h3>Garden</h3>
+              <p class="description">
+                Come play in the dirt to help our gardens grow!
+              </p>
+              <p>Contact: <%= mail_to "kateconnolly@gwi.net", "Kate Connolly"%></p> 
+            </div>
+          </div>
+
+          <div class="row article">
+            <div class="col-md-4 col-sm-4">
+              <%= image_tag("walking_school.jpg") %>
+            </div>
+            <div class="meta col-md-6 col-sm-6">
+              <h3>Walking School Bus</h3>
+              <p class="description">
+                Lead a walking ‘bus’ for a fun and safe group walk to school.
+              </p>
+              <p>Contact: <%= mail_to "sarah@sarahcushman.com", "Sarah Cushman"%></p> 
+            </div>
+          </div>
+
         </div>
-        <h2><span>Mathematics at EECS</span></h2>
-
-        <h3><span>enVision Math</span></h3>
-          <p>East End Community School, along with several other elementary schools in Portland, has adopted Pearson’s enVision Common Core Edition as our math program. This is a rigorous and focused program that is based on The Common Core State Standards.</p>
-
-          <strong><p>How is Envision different from other math programs?</p></strong>
-
-          <p>Envision was one of the first math programs written to meet the Common Core State Standards. It focuses on building strong foundational knowledge and number sense while moving students toward advanced mathematical thinking. Every lesson has visual learning, interactive learning, and independent practice. Envision spends a lot of time delving deeply into a concept; fewer topics are taught, but students develop a deeper understanding of math.</p>
-
-          <p>In Grades K, 1, and 2, students will develop a strong understanding of numbers (number sense and place value), master addition and subtraction facts, and will develop basic geometry skills.</p>
-
-          <p>In grades 3, 4, and 5, students will develop a strong understanding of mathematical properties, mathematical patterns, geometry, measurement with precision and purpose, analyzing and solving problems, and will develop a mastery of problem solving with fractions.</p>
-
-          <strong><p>How do you know my child understands the material?</p></strong>
-
-          <p>Envision has assessments embedded into every day’s work. There is a daily quick check, there is a topic test after each topic is complete, and there is a benchmark test after every four topics.</p>
-
-          <strong><p>What does a lesson look like?</p></strong>
-
-          <p>Every lesson starts with posing a problem to students who work collaboratively to solve the problem.  Next, students see and discuss an animation that takes them through a problem. This sets the purpose for the day’s work.  Students then work collaboratively on some interactive problems before moving into independent work. Finally, students are assessed on their learning for the day, and homework is assigned based on what each student needs to practice.</p>
-
-          <strong><p>Is there homework?</p></strong>
-
-          <p>There is extra work each day that students will need to complete to be successful in math. In the primary grades, time may be built in to the day to complete “homework.” In the intermediate grades, students will have homework Monday-Thursday. Students who complete their homework are proving to be significantly more successful on assessments.</p>
-
-          <p>Please feel free to contact <%= mail_to "chardj@portlandschools.org", "Joshua Chard"%> for more information.</p>
-
-        <h3><span>FASTT Math</span></h3>
-
-          <p>The Common Core State Standards require students to develop fluency with their math facts in the four operations, addition, subtraction, multiplication, and division. FASTT Math from Scholastic is a computer-based program for students in grades 2-5 that helps students become fluent with their facts.</p>
-
-          <p>Fact mastery goals are as follows:</p>
-            <ul>
-              <li>addition 0-9 by the end of second grade;</li>
-              <li>subtraction 0-9 and multiplication 0-9 by the end of third grade;</li> 
-              <li>division 0-9 by the end of fourth grade.</li> 
-            </ul>
-
-          <p>At home, students can link to the Stretch Games in FASTT Math at <%= link_to "http://www2.portlandschools.org", "http://www2.portlandschools.org" %>. Click on the Student link and choose Scholastic Applications.</p>
-
-        <h3><span>First In Math</span></h3>
-
-          <p>First In Math is another computer-based program that allows students in grades K-5 to select math activities and develop skills while earning stickers for themselves and for their class team. This program can be accessed from any computer with an Internet connection at <%= link_to "firstinmath.com", "http://firstinmath.com" %>.</p>
-
-          <p>For more information about math at EECS, please feel free to e-mail <%= mail_to "chardj@portlandschools.org", "Joshua Chard"%>, give him a call at school, or just drop by his office (room 231).</p>
-
-
-        <h2><span>Literacy and Reading Comprehension</span></h2>
-        <p>Blurb here about reading programs, maybe something from the literacy girls? Forgot their names but they're awesome.</p>
       </div>
     </div>
   </div>

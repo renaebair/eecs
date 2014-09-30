@@ -18,6 +18,7 @@ Eecs::Application.routes.draw do
   get 'about/sustainability' => 'pages#sustainability'
   get 'about/academics' => 'pages#academics'
   get 'contact' => 'pages#contact'
+  get "pages/download_pdf"
 
   resources :messages, :only => :create
   resources :posts

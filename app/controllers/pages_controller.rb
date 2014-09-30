@@ -21,4 +21,12 @@ class PagesController < ApplicationController
   def announcements
     @events = Event.all.order('created_at DESC')
   end
+
+  def download_pdf
+    send_file(
+      "#{Rails.root}/public/volunteers.pdf",
+      filename: "volunteers.pdf",
+      type: "application/pdf"
+    )
+  end
 end
