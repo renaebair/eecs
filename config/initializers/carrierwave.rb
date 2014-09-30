@@ -7,6 +7,7 @@ CarrierWave.configure do |config|
   }
  
   config.fog_directory    = "eecs.#{Rails.env}"
+  # config.fog_directory    = "eecs.production"
   config.fog_public       = true
   config.asset_host       = "http://#{config.fog_directory}.s3.amazonaws.com"
 end
