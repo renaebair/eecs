@@ -25,7 +25,7 @@
               <li><%= link_to "Lunch Menus", "http://www2.portlandschools.org/lunch-menus" %></li>
               <li><%= link_to "Student Handbook", "http://www2.portlandschools.org/sites/default/files/handbooks/Parent%20Handbook.pdf" %></li>
               <li><%= link_to "PTO", "http://eecs.portlandpto.org/" %></li>
-              <li><%= link_to "Newsletter", "http://www2.portlandschools.org/sites/default/files/School%20Success%20Plan.PDF" %></li>
+              <li><%= link_to "Newsletter", newsletters_path %></li>
               <li><%= link_to "Walking School Bus", "http://portlandwalkingschoolbus.org/" %></li>
               <li><%= link_to "FASTT Math", about_academics_path(anchor: "fastt") %></li>
               <li><%= link_to "First In Math", about_academics_path(anchor: "fim") %></li>
@@ -34,8 +34,13 @@
           </li>
 
           <li class="<%= 'active' if controller.action_name == 'contact' %>"><%= link_to 'Contact', contact_path %></li>
+          
+          <li><span class="fa fa-facebook"><%= link_to " ", "https://www.facebook.com/eecsportland" %></span></li>
+          <li><span class="fa fa-youtube"><%= link_to " ", "http://www.youtube.com/results?search_query=%22east%20end%20community%20school%22&sm=3" %></span></li>
+          <li><span class="fa fa-pinterest"><%= link_to " ", "http://www.pinterest.com/search/pins/?q=%22east%20end%20community%20school%22" %></span></li>
         </ul>
       </div><!-- /.navbar-collapse -->
+
     </div>
   </nav>
 </div>

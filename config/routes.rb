@@ -26,6 +26,8 @@ Eecs::Application.routes.draw do
   resources :staff_members, controller: 'admin_users' do
     resources :posts
   end
+
+  resources :newsletters
   # resources :admin_users, :as => :staff_members do
   #   resources :posts
   # end

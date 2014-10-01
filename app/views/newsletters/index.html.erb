@@ -1,0 +1,47 @@
+<div class="background-clouds breadcrumbs-container">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><%= link_to 'Home', root_path %></li>
+      <li class="active">Blog</li>
+    </ol>
+  </div>
+</div>
+<!-- Breadcrumbs - END -->
+
+<section class="posts">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= render 'pages/about_sidebar' %>
+      </div>
+      <div class="col-md-9">
+        <div class="content">
+          <% @newsletters.each do |newsletter| %>
+            <div class='post'>
+              <h2><%= newsletter.title %></h2>
+
+              <% if newsletter.images.present? %>
+                <div class="attachments">
+                  <p><strong>Images</strong></p>
+                  <% newsletter.images.each do |attachment| %>
+                    <%= link_to image_tag(attachment.file_url(:square_sm)), attachment.file_url, :target => '_blank' %>
+                  <% end %>
+                </div>
+              <% end %>
+              <% if newsletter.files.present? %>
+                <div class="attachments">
+                  <p><strong>Files</strong></p>
+                  <% newsletter.files.each do |attachment| %>
+                    <%= link_to attachment.file_url.split('/').last, attachment.file_url, :target => '_blank' %>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<section>
+
+<%#= render 'pages/people' %>
