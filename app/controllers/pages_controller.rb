@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_filter :find_staff
 
   def home
-  	@events = Event.published.limit(5)
+  	@events = Event.published
   end
 
   def news
