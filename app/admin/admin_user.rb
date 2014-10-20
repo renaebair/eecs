@@ -1,4 +1,5 @@
 ActiveAdmin.register AdminUser do
+  config.sort_order = "last_name_asc"
   menu :parent => "Super Admin Only", :if => proc { current_admin_user.super_admin? }
   permit_params :email, :password, :password_confirmation, :bio, :first_name, :last_name, :title, :staff_member, :principal, :phone, :on, :admin_user, :image
 
