@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-  	@events = Event.published
+  	@events = Event.published(:order => "created_at DESC")
 
   	respond_to do |format|
       format.html
