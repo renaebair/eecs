@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :find_staff_member
 
 	def index
-		@posts = @user ? @user.posts.all : Post.all
+		@posts = @user ? @user.posts.all(:order => "created_at DESC") : Post.all(:order => "created_at DESC")
 	end
 
 	def show
