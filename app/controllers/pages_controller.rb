@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_filter :find_staff
 
   def home
-  	@events = Event.published
+  	@events = Event.published.all
   end
 
   def news
