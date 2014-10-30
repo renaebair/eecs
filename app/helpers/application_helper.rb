@@ -1,6 +1,8 @@
 module ApplicationHelper
 	def handbook_url
 		Handbook.last.attachments.first.file_url
+	rescue
+		"#"
 	end
 
   def render_markdown(content)
