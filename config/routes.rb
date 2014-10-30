@@ -20,6 +20,7 @@ Eecs::Application.routes.draw do
   get 'contact' => 'pages#contact'
   get "pages/download_pdf"
 
+
   resources :messages, :only => :create
   resources :posts
 
@@ -28,6 +29,7 @@ Eecs::Application.routes.draw do
   end
 
   resources :newsletters
+  resources :handbooks
   # resources :admin_users, :as => :staff_members do
   #   resources :posts
   # end
