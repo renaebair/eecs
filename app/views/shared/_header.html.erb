@@ -17,7 +17,8 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="<%= 'active' if controller.action_name == 'home' %>"><%= link_to 'Home', root_path %></li>
-          <li class="<%= 'active' if request.path =~ /about/ %>"><%= link_to 'About Our School', about_path %></li>
+          <li class="<%= 'active' if request.path.split('/').last =~ /about/ %>"><%= link_to 'About Our School', about_path %></li>
+            <li class="<%= 'active' if request.path.split('/').last =~ /staff/ %>"><%= link_to 'Staff', about_staff_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Parent & Student Resources <b class="caret"></b></a>
             <ul class="dropdown-menu">
